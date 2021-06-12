@@ -2,4 +2,4 @@
 Верстка сайта "Оконный завод"
 
 ## Стек
-Gulp + saas + BEM
+Gulp + sass + BEM
