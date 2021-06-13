@@ -14,15 +14,15 @@ let path = {
   src: {
     html: [srcFolder + "/*.html", "!" + srcFolder + "/_*.html"],
     css: srcFolder + "/sass/style.sass",
-    js: srcFolder + "/js/script.js",
+    js: srcFolder + "/js/*.js",
     img: srcFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    fonts: srcFolder + "/fonts/*.ttf",
+    fonts: srcFolder + "/fonts/*.ttf"
   },
   watch: {
     html: srcFolder + "/**/*.html",
     css: srcFolder + "/sass/**/*.sass",
     js: srcFolder + "/js/**/*.js",
-    img: srcFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    img: srcFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
   },
   clean: "./" + projectFolder + "/"
 }
