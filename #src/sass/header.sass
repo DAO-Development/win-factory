@@ -6,9 +6,12 @@
     background-size: cover
     
     &__head
+        padding: 40px 0 24px
         width: 100%
         display: flex
         justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid $light-grey
 
 
     a
@@ -18,3 +21,32 @@
     &__nav
         display: flex
         gap: 40px
+
+        a
+            font-weight: 500
+            font-size: 15px
+            line-height: 18px
+
+    &__contacts
+        display: flex
+        gap: 95px
+
+        &-number
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 27px;
+            margin-bottom: 4px
+
+        &-mail
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+
+
+    &__main
+        display: grid
+        grid-template-columns: 1fr 1fr
+        
+    &__title
+        grid-template-columns: 1/2
+        grid-template-rows: 1/2
