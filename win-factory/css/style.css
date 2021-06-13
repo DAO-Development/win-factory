@@ -28,6 +28,7 @@ button,
 }
 
 .container {
+  margin: 0 auto;
   max-width: 1312px;
   padding: 0 56px;
   width: 100wv;
@@ -58,13 +59,38 @@ button,
 }
 
 .container {
+  margin: 0 auto;
   max-width: 1312px;
   padding: 0 56px;
   width: 100wv;
 }
 
-header {
+.header {
   background: #14233a;
+  background-image: url("../img/background.png");
+  background-size: cover;
+}
+
+.header__head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
 }
 
 @media screen and (max-width: 414px) {
@@ -97,7 +123,7 @@ header {
   }
 }
 @supports (-webkit-appearance:none){
-
+.header{background-image:url("../img/background.webp")}
 }
 
  @media screen and (max-width: 414px){
