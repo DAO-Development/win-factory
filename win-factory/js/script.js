@@ -1,2 +1,2 @@
-import("../libs/slick/slick")
+import("slick.js")
 import("window.js")
