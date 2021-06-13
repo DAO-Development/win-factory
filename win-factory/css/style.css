@@ -227,6 +227,10 @@ section {
   border-radius: 10px;
 }
 
+.window__services-content .services-slider .slide {
+  padding: 0 80px;
+}
+
 .window__services-content .service__main {
   z-index: 100;
   padding: 40px 60px;
