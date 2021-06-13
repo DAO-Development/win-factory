@@ -16,13 +16,13 @@ let path = {
     css: srcFolder + "/sass/style.sass",
     js: srcFolder + "/js/*.js",
     img: srcFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    fonts: srcFolder + "/fonts/*.ttf",
+    fonts: srcFolder + "/fonts/*.ttf"
   },
   watch: {
     html: srcFolder + "/**/*.html",
     css: srcFolder + "/sass/**/*.sass",
     js: srcFolder + "/js/**/*.js",
-    img: srcFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    img: srcFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
   },
   clean: "./" + projectFolder + "/"
 }
