@@ -371,7 +371,7 @@ section {
   font-size: 38px;
 }
 
-.window__services-content__capability {
+.window__services-content .services__capability {
   position: relative;
   width: 1036px;
   height: 679px;
@@ -389,10 +389,12 @@ section {
   background: -webkit-gradient(linear, right top, left top, from(rgba(20, 35, 58, 0.05)), to(#14233A)), url("../img/window/window-service-photo.png") no-repeat 100% 100%;
   background: -o-linear-gradient(right, rgba(20, 35, 58, 0.05) 0%, #14233A 100%), url("../img/window/window-service-photo.png") no-repeat 100% 100%;
   background: linear-gradient(270deg, rgba(20, 35, 58, 0.05) 0%, #14233A 100%), url("../img/window/window-service-photo.png") no-repeat 100% 100%;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .window__services-content .service__main h3 {
   margin-bottom: 16px;
+  width: 362px;
   color: white;
   font-size: 22px;
   font-weight: 700;
@@ -409,110 +411,84 @@ section {
   padding: 40px 60px;
 }
 
-/* Slider */
+.window__services-content .service__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 65%;
+  height: 346px;
+  list-style: none;
+}
 
-.slick-slider {
+.window__services-content .service__list ul li {
+  max-width: 400px;
+  margin-right: 68px;
+  margin-bottom: 30px;
+}
+
+.window__services-content .service__list ul li:nth-child(3n) {
+  margin-bottom: 0;
+}
+
+.window__services-content .service__list ul li h4 {
   position: relative;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
+  margin-left: 36px;
+  margin-bottom: 12px;
+  font-size: 18px;
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+.window__services-content .service__list ul li h4::before {
+  content: url("../img/window/list.svg");
+  position: absolute;
+  top: -2px;
+  left: -36px;
 }
 
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+.arrow-next {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.slick-list:focus {
-  outline: none;
-}
-
-.slick-list.dragging {
+.arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  cursor: hand;
+  position: absolute;
+  top: 47%;
 }
 
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
+.arrow img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 17px;
 }
 
-.slick-track:before,
-.slick-track:after {
-  display: table;
-  content: '';
+.arrow-prev {
+  position: absolute;
+  z-index: 1000;
+  left: -26px;
 }
 
-.slick-track:after {
-  clear: both;
+.arrow-next {
+  position: absolute;
+  right: -26px;
 }
 
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-
-.slick-slide img {
-  display: block;
-}
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-slide {
-  float: right;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-  display: none;
+.arrow-next img {
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 1024px) {
