@@ -21,7 +21,7 @@ $light-grad: linear-gradient(0deg, #F9F9F9 0.01%, #FFFFFF 100.02%)
 $mobileS: 360px
 $mobileM: 414px
 $mobileL: 568px
-$mobileXS: 768px
+$mobileXL: 768px
 $tablet: 1024px
 $desktopS: 1440px
 $desktopM: 1600px
@@ -39,4 +39,19 @@ body
     font-family: Roboto
 h1,h2,h3,h4,h5,h6,button,.btn
     font-family: 'Montserrat', sans-serif
+
+.container
+    max-width: 1312px
+    padding: 0 56px
+    width: 100wv
+
+    @media screen and ( ax-width: $mobileL)
+        padding: 0 40px
+
+    @media screen and ( max-width: $mobileM)
+        padding: 0 32px
+        
+    @media screen and ( max-width: $mobileS)
+        padding: 0 30px
+        
 

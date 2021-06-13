@@ -6,6 +6,7 @@
 
 200;300;400;500;600;700;800;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -26,9 +27,99 @@ button,
   font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+  max-width: 1312px;
+  padding: 0 56px;
+  width: 100wv;
+}
+
+/* белый и черный дефолтные css*/
+
+/*font-family: 'Montserrat', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
+  font-family: Roboto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.btn {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1312px;
+  padding: 0 56px;
+  width: 100wv;
+}
+
+header {
   background: #14233a;
 }
+
+@media screen and (max-width: 414px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (ax-width: 568px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+}
 @supports (-webkit-appearance:none){
+
+}
+
+ @media screen and (max-width: 414px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 360px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (ax-width: 568px){
+
+@supports (-webkit-appearance:none){
+
+}
 
 }
