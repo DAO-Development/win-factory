@@ -50,7 +50,7 @@
         grid-template-columns: 1fr 1fr
         grid-gap: 67px 105px
 
-        margin: 96px 0 153px
+        margin: 96px 0 0px
         
     &__title
         grid-column: 1/2
@@ -87,6 +87,7 @@
             font-size: 14px;
             line-height: 24px;
             display: block
+            text-transform: uppercase;
     
         input[type="text"]
             border: 1px solid $white-op-40
@@ -126,6 +127,10 @@
         justify-content: space-between
         padding-top: 27px
 
+        >*
+            padding-bottom: 153px
+            
+
     &__price
         width: 100%
         text-align: right
@@ -148,4 +153,20 @@
             line-height: 170%;
             text-transform: uppercase;
 
+    &__footer
+        background: $dark-grad
+        padding: 33px 0
 
+        .container
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+        &-item
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+
+        &-item_active
+            color: $orange !important
