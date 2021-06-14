@@ -599,6 +599,91 @@ section {
   padding: 100px 0;
 }
 
+.window__options .options-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1200px;
+}
+
+.window__options .options__card {
+  position: relative;
+  width: 285px;
+  height: 285px;
+  padding: 31px 38px 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.window__options .options__card:hover {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 18, 69, 0.12);
+          box-shadow: 0 5px 15px rgba(0, 18, 69, 0.12);
+}
+
+.window__options .options__card:nth-child(1) .card-title {
+  margin-top: 42px;
+}
+
+.window__options .options__card:nth-child(2) .card-image {
+  padding-left: 36px;
+}
+
+.window__options .options__card:nth-child(2) .card-title {
+  margin-top: 42px;
+}
+
+.window__options .options__card .card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 134px;
+  height: 92px;
+  margin: 0 auto;
+  background-image: url("../img/window/cloud.svg");
+  background-size: contain;
+}
+
+.window__options .options__card .card-image img {
+  width: 74px;
+  height: 74px;
+}
+
+.window__options .options__card .card-title {
+  margin: 31px 0 41px;
+  text-align: center;
+}
+
+.window__options .options__card .card-link {
+  position: absolute;
+  bottom: 40px;
+  left: 71px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: bold;
+  color: #eb652f;
+  text-transform: uppercase;
+}
+
+.window__options .options__card .card-link:after {
+  content: url("../img/window/link-arrow.svg");
+  margin-left: 12px;
+}
+
 .arrow {
   z-index: 10000;
   width: 56px;
@@ -1053,6 +1138,7 @@ section {
 .window .services .service__main{background:-webkit-gradient(linear, right top, left top, from(rgba(20, 35, 58, 0.05)), to(#14233A)), url("../img/window/window-service-photo.webp") no-repeat 100% 100%}
 .window .services .service__main{background:-o-linear-gradient(right, rgba(20, 35, 58, 0.05) 0%, #14233A 100%), url("../img/window/window-service-photo.webp") no-repeat 100% 100%}
 .window .services .service__main{background:linear-gradient(270deg, rgba(20, 35, 58, 0.05) 0%, #14233A 100%), url("../img/window/window-service-photo.webp") no-repeat 100% 100%}
+.window__options .options__card .card-image{background-image:url("../img/window/cloud.svg")}
 .arrow-prev{background-image:url("../img/window/prev-arrow-active.svg")}
 .arrow-prev.slick-disabled{background-image:url("../img/window/prev-arrow.svg")}
 .arrow-next{background-image:url("../img/window/next-arrow-active.svg")}
