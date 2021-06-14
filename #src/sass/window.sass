@@ -276,6 +276,69 @@
         background-color: $background-light-grey
         padding: 100px 0
 
+        .options-content
+            display: flex
+            justify-content: space-between
+            width: 1200px
+
+        .options__card
+            position: relative
+            width: 285px
+            height: 285px
+            padding: 31px 38px 40px
+            background-color: white
+            border-radius: 10px
+
+            &:hover
+                box-shadow: 0 5px 15px $shadow-grey
+
+
+            &:nth-child(1)
+                .card-title
+                    margin-top: 42px
+
+            &:nth-child(2)
+                .card-image
+                    padding-left: 36px
+
+                .card-title
+                    margin-top: 42px
+
+            .card
+                &-image
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 134px
+                    height: 92px
+                    margin: 0 auto
+                    background-image: url("../img/window/cloud.svg")
+                    background-size: contain
+
+                    & img
+                        width: 74px
+                        height: 74px
+
+                &-title
+                    margin: 31px 0 41px
+                    text-align: center
+
+                &-link
+                    position: absolute
+                    bottom: 40px
+                    left: 71px
+                    display: flex
+                    align-items: center
+                    font-size: 14px
+                    line-height: 15px
+                    font-weight: bold
+                    color: $orange
+                    text-transform: uppercase
+
+                    &:after
+                        content: url("../img/window/link-arrow.svg")
+                        margin-left: 12px
+
 
 .arrow
     z-index: 10000
