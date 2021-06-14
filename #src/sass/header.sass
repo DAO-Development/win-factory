@@ -10,11 +10,31 @@
         padding: 40px 0 24px
         width: 100%
         display: flex
-        flex-wrap: wrap
         justify-content: space-between
         align-items: center
         border-bottom: 1px solid $white-op-16
         margin-bottom: 96px
+
+        @media screen and ( max-width: $mobileL )
+            flex-wrap: nowrap
+            gap: 30px
+            padding-bottom: 0px
+            border: none
+            margin: 0
+
+        @media screen and ( max-width: $mobileM)
+            flex-wrap: wrap
+            padding-top: 32px
+            gap: 34px
+
+        @media screen and ( max-width: $mobileS)
+            padding-top: 35px
+            gap: 26px
+            
+            img
+                width: 109px
+
+            
 
 
     &__logo
@@ -22,6 +42,9 @@
         @media ( max-width: $tablet)
             padding: 0
             
+        @media screen and ( max-width: $mobileL )
+            img
+                width: 128px
 
     a
         text-decoration: none
@@ -29,6 +52,7 @@
 
     &__nav
         display: flex
+        justify-content: space-between
         gap: 40px
 
         a
@@ -37,15 +61,36 @@
             line-height: 18px
 
         @media screen and ( max-width: $tablet )
+
             a:last-child
                 display: none
-        @media screen and ( max-width: $mobileXL) and (min-width: $mobileL)
+                
+        @media screen and ( max-width: $mobileXL) and (min-width: $mobileL+1)
+            
             a
                 display: none
-        
-        @media screen and ( max-width: $mobileM)
+
+        @media ( max-width: $mobileL)
+            width: -moz-available
+            gap: unset
             width: 100%
+            padding-bottom: 26px
+            margin-bottom: 4px
+            border-bottom: 1px solid $white-op-16
+            align-self: end
+
+            a
+                font-size: 17px
+            a:last-child
+                display: block
+            a:nth-child(3)
+                display: none
         
+        @media screen and ( max-width:  $mobileS)
+            a 
+                font-size: 15px
+
+            
 
     &__contacts
         display: flex
@@ -59,15 +104,15 @@
 
 
         &-number
-            font-weight: bold;
-            font-size: 23px;
-            line-height: 27px;
+            font-weight: bold 
+            font-size: 23px 
+            line-height: 27px 
             margin-bottom: 4px
 
         &-mail
-            font-weight: 300;
-            font-size: 12px;
-            line-height: 14px;
+            font-weight: 300 
+            font-size: 12px 
+            line-height: 14px 
             text-align: right
 
 
@@ -80,11 +125,56 @@
 
         @media screen and ( max-width: $mobileL )
             grid-template-columns: 1fr
+            margin-top: 56px
+            .header__benefits
+                width: 108%
+                grid-column: 1/2
+                grid-row: 3/4
+
+            .header__form
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-gap: 0 25px
+            
+            .header__invoke
+                grid-column: 2/3
+                grid-row: 1/2
+                place-self: end start
+
+            form
+                grid-column: 1/2
+                grid-row: 1/2 
+
+            .header__submit
+                grid-column: 1/2 
+                grid-row: 2/3
 
             .header__benefits
-                grid-column: 1/2
-                grid-wor: 3/4
-                
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr 1fr
+                overflow: scroll
+                flex-direction: row
+                gap: 56px
+
+                .header__price
+                    width: 190px
+                &-item
+                    width: fit-content
+                    flex-direction: column
+                    place-items: start
+                    padding-right: 56px
+                    border: none
+                    border-right: 1px solid $white-op-16
+
+        @media screen and ( max-width: $mobileM)
+            margin-top: 75px
+
+            .header__form
+                display: block
+
+        @media screen and ( max-width: $mobileS )
+            margin-top: 56px
+            
             
         
     &__title
@@ -94,15 +184,15 @@
         margin-bottom: 34px
         border-bottom: 1px solid $white-op-16
         &-desc
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 16px;
-            text-transform: uppercase;
+            font-weight: 300 
+            font-size: 14px 
+            line-height: 16px 
+            text-transform: uppercase 
 
         &-h
-            font-weight: bold;
-            font-size: 45px;
-            line-height: 53px;
+            font-weight: bold 
+            font-size: 45px 
+            line-height: 53px 
             margin: 7px 0
         @media screen and ( max-width: $tablet)
             padding-bottom: 42px
@@ -110,7 +200,7 @@
                 font-size: 42px
                 margin: 7px 0 16px
             &-menu
-                gap: 24px;
+                gap: 24px 
                 a
                     font-size: 16px
 
@@ -118,11 +208,43 @@
             padding-bottom: 28px
             margin-bottom: 39px
             &-h
-                font-size: 36px;
-                line-height: 42px;
+                font-size: 36px 
+                line-height: 42px 
                 margin: 9px 0 20px
 
+        @media screen and ( max-width: $mobileL)
+            
+            margin-bottom: 28px
 
+            &-desc
+                font-size: 13px
+
+            &-h
+                font-size: 32px
+                margin: 1px 0 18px
+
+            &-menu a
+                font-size: 15px
+
+        @media screen and ( max-width: $mobileM)
+            margin-bottom: 44px
+            
+        @media screen and ( max-width: $mobileS)
+            padding-bottom: 18px
+            
+            &-desc
+                font-size: 11px
+            
+            &-h
+                font-size: 30px
+            
+            &-menu
+                gap: 12px
+                a
+                    font-size: 13px
+                    padding-right: 0
+                    border: none
+            
 
         &-menu
             display: flex
@@ -142,60 +264,91 @@
         grid-row: 2/3
 
         input
-            box-sizing: border-box;
-            border-radius: 10px;
-            width: 295px;
-            height: 48px;
+            box-sizing: border-box 
+            border-radius: 10px 
+            width: 295px 
+            height: 48px 
             margin: 16px 0
             color: white
             padding-lefT: 24px
             text-align: left
-            font-size: 14px;
-            line-height: 24px;
+            font-size: 14px 
+            line-height: 24px 
             display: block
+            @media screen and ( max-width: $mobileL )
+                width: 276px
+            @media screen and ( max-width: $mobileM )
+                width: 260px
+                
     
         input[type="text"]
             border: 1px solid $white-op-40
             background: $white-op-20
 
         input[type="submit"]
-            font-weight: 900;
-            text-transform: uppercase;
+            font-weight: 900 
+            text-transform: uppercase 
             background: $orange
             outline: none
             border: none
+            height: 56px
+            @media screen and ( max-width: $mobileM )
+                height: 48px
 
     &__invoke
         margin-bottom: 24px
+        @media screen and ( max-width: $mobileM )
+            margin-bottom: 38px
+        @media screen and ( max-width: $mobileS )
+            margin-bottom: 22px
+            
+            
     &__invoke-up
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 15px;
-        text-transform: uppercase;
+        font-weight: 300 
+        font-size: 13px 
+        line-height: 15px 
+        text-transform: uppercase 
         @media screen and ( max-width: $mobileXL)
             margin-bottom: 10px
+        @media screen and ( max-width: $mobileL)
+            font-size: 12px
+        @media screen and ( max-width: $mobileS)
+            font-size: 11px
+            margin-bottom: 4px  
+
 
     &__invoke-down
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 32px;
-        text-transform: uppercase;
+        font-weight: 900 
+        font-size: 18px 
+        line-height: 32px 
+        text-transform: uppercase 
         color: $orange
         @media screen and ( max-width: $tablet)
             line-height: 42px
         @media screen and ( max-width: $mobileXL)
             line-height: 20px
+        @media screen and ( max-width: $mobileL)
+            font-size: 17px
+        
+
 
     &__submit
-        width: 226px;
-        margin-bottom: 153px;
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 140%;
+        width: 226px 
+        margin-bottom: 153px 
+        font-weight: 300 
+        font-size: 13px 
+        line-height: 140% 
         @media screen and ( max-width:  $tablet)
             margin-bottom: 108px
         @media screen and ( max-width:  $mobileXL)
             margin-bottom: 128px
+        @media screen and ( max-width:  $mobileL)
+            font-size: 12px
+            margin-bottom: 9px
+        @media screen and ( max-width:  $mobileS)
+            margin-bottom: 0
+
+
             
 
     &__benefits
@@ -205,12 +358,13 @@
         flex-wrap: wrap
         justify-content: space-between
         padding-top: 27px
+        align-items: start !important
 
         &-desc
-            font-weight: 300;
-            font-size: 13px;
-            line-height: 140%;
-            text-transform: uppercase;
+            font-weight: 300 
+            font-size: 13px 
+            line-height: 140% 
+            text-transform: uppercase 
 
             &-down
                 font-size: 18px
@@ -237,20 +391,22 @@
             display: flex
             flex-direction: column
             gap: 32px
+            svg
+                place-self: start
         >*:last-child
             border: none
             padding-right: 0
         @media screen and ( max-width: $tablet)
             flex-direction: column
             place-items: end
-            justify-content: normal;
+            justify-content: normal 
             padding: 0
+            margin-top: 40px
             >*
                 width: 265px
 
                 text-align: left
                 padding: 0px 0 42px
-                margin: 40px 0 0
                 border: none
                 border-bottom: 1px solid $white-op-16
                 flex-direction: row
@@ -264,10 +420,13 @@
             margin-top: 13px
 
             >*
+                margin-top: 34px
+
                 width: 206px
                 gap: 22px
-                margin-top: 34px
                 padding-bottom: 28px
+                justify-self: end
+
 
             &-desc
                 font-size: 12px
@@ -275,8 +434,28 @@
             &-desc-down
                 font-size: 14px
 
+        @media screen and ( max-width: $mobileL)
 
+            >*
+                margin-top: 0
 
+                padding-bottom: 100px   
+
+        @media screen and ( max-width: $mobileM )
+            margin-top: 46px
+
+            >*
+                padding-bottom: 94px
+                .header__benefits-desc
+                    margin-top: 10px
+                
+            >*:first-child
+                .header__benefits-desc
+                    margin-top: 0
+
+        @media screen and ( max-width: $mobileS )
+            >*
+                padding-bottom: 78px
 
 
     &__price
@@ -305,9 +484,9 @@
             padding-left: 8px
 
         &-down
-            font-size: 14px;
-            line-height: 180%;
-            text-transform: uppercase;
+            font-size: 14px 
+            line-height: 180% 
+            text-transform: uppercase 
         @media screen and ( max-width: $mobileXL)
             &-cost
                 font-size: 27px
@@ -333,8 +512,8 @@
                 padding-left: 3px
 
             &-down
-                font-size: 12px;
-                line-height: 22px;
+                font-size: 12px 
+                line-height: 22px 
             
 
             
@@ -344,6 +523,8 @@
         padding: 33px 0
         @media screen and ( max-width:  $tablet)
             padding: 32px 0 28px
+        @media screen and ( max-width:  $mobileM)
+            padding: 25px 0 27px    
 
 
         .container
@@ -353,19 +534,34 @@
             gap: 24px 30px
 
             @media screen and ( max-width:  $mobileXL)
-                justify-content: center;
+                justify-content: center 
                 gap: 24px 60px
+
+            @media screen and ( max-width:  $mobileXL)
+                gap: 23px 50px
+
+            @media screen and ( max-width:  $mobileM)
+                overflow: scroll
+                flex-wrap: nowrap
+                display: block
+                white-space: nowrap
+
+                .header__footer-item
+                    white-space: nowrap
+                    margin-right: 32px
+
                 
 
         &-item
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 19px;
-            text-transform: uppercase;
+            font-weight: bold 
+            font-size: 16px 
+            line-height: 19px 
+            text-transform: uppercase 
             @media screen and ( max-width:  $tablet)
                 font-size: 14px
                 line-height: 14px
-
+            @media screen and ( max-width:  $mobileXL)
+                font-size: 13px
 
 
         &-item_active
