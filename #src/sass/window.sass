@@ -1,0 +1,395 @@
+@import "base"
+.window
+    & .services
+        & > .container
+            @media screen and (max-width: $mobileXL)
+                padding: 0 34px
+
+            @media screen and (max-width: $mobileL)
+                padding: 0 20px
+
+            @media screen and (max-width: $mobileM)
+                padding: 0 12px
+
+        &__tabs
+            display: flex
+            gap: 12px
+            align-content: center
+            max-width: 912px
+            margin: 0 auto 40px
+
+            @media screen and (max-width: $tablet)
+                margin: 0 0 38px
+
+            @media screen and (max-width: $mobileXL)
+                overflow-x: scroll
+
+            @media screen and (max-width: $mobileL)
+                gap: 8px
+                margin-bottom: 20px
+
+            @media screen and (max-width: $mobileM)
+                display: none
+
+            @media screen and (max-width: $mobileS)
+                display: none
+
+            & .tab
+                padding: 14px 22px
+                border: 1px solid $tabs-grey
+                box-sizing: border-box
+                border-radius: 30px
+                font-size: 12px
+                line-height: 15px
+                font-weight: bold
+                color: $tabs-grey
+                text-align: center
+                text-transform: uppercase
+                transition: 0.3s ease
+
+                &:nth-child(1)
+                    min-width: 143px
+                    width: 143px
+                    @media screen and (max-width: $mobileL)
+                        min-width: 119px
+                        width: 119px
+
+                &:nth-child(3)
+                    min-width: 136px
+                    width: 136px
+                    @media screen and (max-width: $mobileL)
+                        min-width: 113px
+                        width: 113px
+
+                &:nth-child(5)
+                    min-width: 165px
+                    width: 165px
+                    @media screen and (max-width: $mobileL)
+                        min-width: 137px
+                        width: 137px
+
+                &:nth-child(7)
+                    min-width: 198px
+                    width: 198px
+                    @media screen and (max-width: $mobileL)
+                        min-width: 164px
+                        width: 164px
+
+
+                @media screen and (max-width: $mobileL)
+                    padding: 12px 18px
+                    font-size: 10px
+
+                & > span
+                    margin: 0
+                    padding: 0
+                    box-sizing: content-box
+
+                &.tab-active
+                    border: 1px solid $orange
+                    color: $orange
+
+            & .tabs-line
+                min-width: 66px
+                max-width: 66px
+                background-image: url("../img/window/line.svg")
+                background-repeat: no-repeat
+                background-position: 0 50%
+                height: auto
+                transition: 0.3s ease
+
+                @media screen and (max-width: $mobileXL)
+                    min-width: 40px
+
+                @media screen and (max-width: $mobileL)
+                    min-width: 32px
+
+                &.tabs-line-active
+                    background-image: url("../img/window/line-active.svg")
+
+        &__capability
+            position: relative
+            width: 1036px
+            height: 679px
+            background-color: $background-light-grey
+            border-radius: 10px
+
+            @media screen and (max-width: $tablet)
+                width: 784px
+                height: 707px
+
+            @media screen and (max-width: $mobileXL)
+                width: 74vw
+                height: 911px
+
+            @media screen and (max-width: $mobileL)
+                width: 86vw
+                height: 860px
+
+            @media screen and (max-width: $mobileM)
+                max-width: 85vw
+                height: 1055px
+
+            @media screen and (max-width: $mobileS)
+                max-width: 83vw
+                height: 997px
+
+        &-slider
+            & .slide
+                padding: 0 80px
+
+                @media screen and (max-width: $tablet)
+                    padding: 0 64px
+
+                @media screen and (max-width: $mobileXL)
+                    padding: 0 42px
+
+                @media screen and (max-width: $mobileL)
+                    padding: 0 20px
+
+                @media screen and (max-width: $mobileS)
+                    padding: 0 18px
+
+        .service
+            &__main
+                z-index: 100
+                padding: 40px 60px
+                height: 41.5%
+                background: $dark-grad-2
+                background: $dark-grad-2, url("../img/window/window-service-photo.png") no-repeat 100% 100%
+                border-radius: 10px 10px 0px 0px
+
+                @media screen and (max-width: $tablet)
+                    padding: 40px
+                    height: 39.5%
+
+                @media screen and (max-width: $mobileXL)
+                    height: 30.5%
+
+                @media screen and (max-width: $mobileL)
+                    padding: 30px
+                    height: 27.5%
+
+                @media screen and (max-width: $mobileM)
+                    height: 24.5%
+
+                @media screen and (max-width: $mobileS)
+                    padding: 24px
+                    height: 24%
+
+                h3
+                    width: 362px
+                    color: white
+
+                    @media screen and (max-width: $mobileL)
+                        max-width: 80vw
+
+                    @media screen and (max-width: $mobileM)
+                        max-width: 60vw
+
+                p
+                    margin-bottom: 30px
+                    width: 362px
+                    color: white
+                    font-size: 16px
+                    line-height: 160%
+                    font-weight: 200
+
+                    @media screen and (max-width: $mobileL)
+                        max-width: 62vw
+                        font-size: 14px
+                        margin-bottom: 26px
+
+                    @media screen and (max-width: $mobileS)
+                        max-width: 100%
+
+            &__list
+                padding: 40px 60px
+
+                @media screen and (max-width: $tablet)
+                    padding: 40px
+
+                @media screen and (max-width: $mobileL)
+                    padding: 30px
+
+                @media screen and (max-width: $mobileS)
+                    padding: 24px
+
+                ul
+                    display: flex
+                    flex-direction: column
+                    flex-wrap: wrap
+                    padding: 0
+                    width: 100%
+                    height: 346px
+                    list-style: none
+
+                    @media screen and (max-width: $tablet)
+                        height: 360px
+
+                    @media screen and (max-width: $mobileXL)
+                        flex-wrap: nowrap
+                        height: auto
+
+                    li
+                        max-width: 430px
+                        margin-right: 40px
+                        margin-bottom: 30px
+
+                        &:nth-child(3n)
+                            margin-bottom: 0
+
+                        @media screen and (max-width: $tablet)
+                            width: 340px
+                            margin-right: 24px
+                            margin-bottom: 24px
+
+                        @media screen and (max-width: $mobileXL)
+                            width: 448px
+                            margin-right: 0
+                            &:nth-child(3n)
+                                margin-bottom: 24px
+
+                        @media screen and (max-width: $mobileL)
+                            width: 100%
+                            margin-bottom: 20px
+                            &:nth-child(3n)
+                                margin-bottom: 20px
+
+                        h4
+                            position: relative
+                            margin-left: 36px
+                            margin-bottom: 12px
+
+                            &::before
+                                content: url("../img/window/list.svg")
+                                position: absolute
+                                top: -2px
+                                left: -36px
+
+                        p
+                            @media screen and (max-width: $mobileS)
+                                font-size: 12px
+                                line-height: 19px
+
+    &__options
+        background-color: $background-light-grey
+        padding: 100px 0
+
+        .options-content
+            display: flex
+            justify-content: space-between
+            width: 1200px
+
+        .options__card
+            position: relative
+            width: 285px
+            height: 285px
+            padding: 31px 38px 40px
+            background-color: white
+            border-radius: 10px
+
+            &:hover
+                box-shadow: 0 5px 15px $shadow-grey
+
+
+            &:nth-child(1)
+                .card-title
+                    margin-top: 42px
+
+            &:nth-child(2)
+                .card-image
+                    padding-left: 36px
+
+                .card-title
+                    margin-top: 42px
+
+            .card
+                &-image
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 134px
+                    height: 92px
+                    margin: 0 auto
+                    background-image: url("../img/window/cloud.svg")
+                    background-size: contain
+
+                    & img
+                        width: 74px
+                        height: 74px
+
+                &-title
+                    margin: 31px 0 41px
+                    text-align: center
+
+                &-link
+                    position: absolute
+                    bottom: 40px
+                    left: 71px
+                    display: flex
+                    align-items: center
+                    font-size: 14px
+                    line-height: 15px
+                    font-weight: bold
+                    color: $orange
+                    text-transform: uppercase
+
+                    &:after
+                        content: url("../img/window/link-arrow.svg")
+                        margin-left: 12px
+
+
+.arrow
+    z-index: 10000
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    cursor: pointer
+    position: absolute
+    top: 46%
+    transition: 0.3s ease
+
+    @media screen and (max-width: $tablet)
+        width: 44px
+        height: 44px
+        top: 47.5%
+
+    @media screen and (max-width: $mobileL)
+        width: 36px
+        height: 36px
+        top: 48%
+
+    img
+        display: block
+        margin-left: 17px
+
+.arrow-prev
+    position: absolute
+    left: 0
+    background-image: url("../img/window/prev-arrow-active.svg")
+    background-size: contain
+
+    @media screen and (max-width: $mobileXL)
+        left: -24px
+    @media screen and (max-width: $mobileL)
+        left: 0
+
+    &.slick-disabled
+        background-image: url("../img/window/prev-arrow.svg")
+
+.arrow-next
+    position: absolute
+    right: 0
+    background-image: url("../img/window/next-arrow-active.svg")
+    background-size: contain
+
+    @media screen and (max-width: $mobileXL)
+        right: 24px
+    @media screen and (max-width: $mobileXL)
+        right: 0
+
+    &.slick-disabled
+        background-image: url("../img/window/next-arrow.svg")

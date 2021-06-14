@@ -1,0 +1,183 @@
+@import "base.sass"
+
+.header
+    background: $dark-blue
+    background-image: url("../img/background.png")
+    background-size: cover
+    color: white
+    
+    &__head
+        padding: 40px 0 24px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid $white-op-16
+        margin-bottom: 96px
+
+
+    a
+        text-decoration: none
+        color: white
+
+    &__nav
+        display: flex
+        gap: 40px
+
+        a
+            font-weight: 500
+            font-size: 15px
+            line-height: 18px
+
+    &__contacts
+        display: flex
+        gap: 95px
+
+        &-number
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 27px;
+            margin-bottom: 4px
+
+        &-mail
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+
+
+    &__main
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 67px 105px
+
+        margin: 96px 0 0px
+        
+    &__title
+        grid-column: 1/2
+        grid-row: 1/2
+        &-desc
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+
+        &-h
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 53px;
+
+        &-menu
+            display: flex
+            gap: 12px
+
+    &__form
+        grid-column: 1/2
+        grid-row: 2/3
+
+        input
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 295px;
+            height: 48px;
+            margin: 16px 0
+            color: white
+            padding-lefT: 24px
+            text-align: left
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 24px;
+            display: block
+            text-transform: uppercase;
+    
+        input[type="text"]
+            border: 1px solid $white-op-40
+            background: $white-op-20
+
+        input[type="submit"]
+            background: $orange
+            outline: none
+            border: none
+
+
+    &__invoke-up
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 15px;
+        text-transform: uppercase;
+
+    &__invoke-down
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: $orange
+
+    &__submit
+        width: 226px;
+
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 140%;
+
+    &__benefits
+        grid-column: 2/3
+        grid-row: 1/3
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding-top: 27px
+
+        >*
+            padding-bottom: 153px
+            border-right: 1px solid $white-op-16
+            padding-right: 56px
+        >*:last-child
+            border: none
+            padding-right: 0
+
+
+
+    &__price
+        width: 100%
+        text-align: right
+        padding-bottom: 48px
+        margin-bottom: 47px
+        padding-right: 0
+
+        border-right: none
+        border-bottom: 1px solid $white-op-16
+
+
+        &-up
+            color: $orange
+        
+        &-cost
+            font-size: 50px
+            line-height: 65px
+
+        &-num
+            font-weight: 900
+            padding-left: 8px
+
+        &-down
+            font-size: 14px;
+            line-height: 170%;
+            text-transform: uppercase;
+
+    &__footer
+        background: $dark-grad
+        padding: 33px 0
+
+        .container
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+        &-item
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+
+        &-item_active
+            color: $orange !important
