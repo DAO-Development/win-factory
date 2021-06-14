@@ -10,11 +10,18 @@
         padding: 40px 0 24px
         width: 100%
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
         align-items: center
         border-bottom: 1px solid $white-op-16
         margin-bottom: 96px
 
+
+    &__logo
+        padding-right: 40px
+        @media ( max-width: $tablet)
+            padding: 0
+            
 
     a
         text-decoration: none
@@ -29,9 +36,27 @@
             font-size: 15px
             line-height: 18px
 
+        @media screen and ( max-width: $tablet )
+            a:last-child
+                display: none
+        @media screen and ( max-width: $mobileXL) and (min-width: $mobileL)
+            a
+                display: none
+        
+        @media screen and ( max-width: $mobileM)
+            width: 100%
+        
+
     &__contacts
         display: flex
         gap: 95px
+        @media screen and ( max-width: $tablet )
+            gap: 81px
+            padding-left: 43px
+
+        @media screen and ( max-width: $mobileL )
+            display: none
+
 
         &-number
             font-weight: bold;
@@ -43,18 +68,31 @@
             font-weight: 300;
             font-size: 12px;
             line-height: 14px;
+            text-align: right
 
 
     &__main
         display: grid
         grid-template-columns: 1fr 1fr
-        grid-gap: 67px 105px
+        grid-gap: 0px 130px
 
         margin: 96px 0 0px
+
+        @media screen and ( max-width: $mobileL )
+            grid-template-columns: 1fr
+
+            .header__benefits
+                grid-column: 1/2
+                grid-wor: 3/4
+                
+            
         
     &__title
         grid-column: 1/2
         grid-row: 1/2
+        padding-bottom: 32px
+        margin-bottom: 34px
+        border-bottom: 1px solid $white-op-16
         &-desc
             font-weight: 300;
             font-size: 14px;
@@ -65,10 +103,39 @@
             font-weight: bold;
             font-size: 45px;
             line-height: 53px;
+            margin: 7px 0
+        @media screen and ( max-width: $tablet)
+            padding-bottom: 42px
+            &-h
+                font-size: 42px
+                margin: 7px 0 16px
+            &-menu
+                gap: 24px;
+                a
+                    font-size: 16px
+
+        @media screen and ( max-width: $mobileXL)
+            padding-bottom: 28px
+            margin-bottom: 39px
+            &-h
+                font-size: 36px;
+                line-height: 42px;
+                margin: 9px 0 20px
+
+
 
         &-menu
             display: flex
             gap: 12px
+            
+            @media screen and ( max-width: $mobileXL)
+                gap: 16px
+                >*
+                    border-right: 1px solid $white-op-16
+                    padding-right: 16px
+                >*:last-child
+                    border: none
+                
 
     &__form
         grid-column: 1/2
@@ -83,27 +150,30 @@
             color: white
             padding-lefT: 24px
             text-align: left
-            font-weight: 900;
             font-size: 14px;
             line-height: 24px;
             display: block
-            text-transform: uppercase;
     
         input[type="text"]
             border: 1px solid $white-op-40
             background: $white-op-20
 
         input[type="submit"]
+            font-weight: 900;
+            text-transform: uppercase;
             background: $orange
             outline: none
             border: none
 
-
+    &__invoke
+        margin-bottom: 24px
     &__invoke-up
         font-weight: 300;
         font-size: 13px;
         line-height: 15px;
         text-transform: uppercase;
+        @media screen and ( max-width: $mobileXL)
+            margin-bottom: 10px
 
     &__invoke-down
         font-weight: 900;
@@ -111,13 +181,22 @@
         line-height: 32px;
         text-transform: uppercase;
         color: $orange
+        @media screen and ( max-width: $tablet)
+            line-height: 42px
+        @media screen and ( max-width: $mobileXL)
+            line-height: 20px
 
     &__submit
         width: 226px;
-
+        margin-bottom: 153px;
         font-weight: 300;
         font-size: 13px;
         line-height: 140%;
+        @media screen and ( max-width:  $tablet)
+            margin-bottom: 108px
+        @media screen and ( max-width:  $mobileXL)
+            margin-bottom: 128px
+            
 
     &__benefits
         grid-column: 2/3
@@ -127,26 +206,92 @@
         justify-content: space-between
         padding-top: 27px
 
+        &-desc
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 140%;
+            text-transform: uppercase;
+
+            &-down
+                font-size: 18px
+                line-height: 25px
+                font-weight: bold
+
+            &-down_orange
+                font-size: 31px
+                line-height: 31px
+                color: $orange
+                font-weight: 900
+            
+            &-sign
+                font-size: 13px
+                line-height: 13px
+                font-weight: 600
+                padding-left: 2px
+
+
         >*
-            padding-bottom: 153px
+            padding-bottom: 226px
             border-right: 1px solid $white-op-16
             padding-right: 56px
+            display: flex
+            flex-direction: column
+            gap: 32px
         >*:last-child
             border: none
             padding-right: 0
+        @media screen and ( max-width: $tablet)
+            flex-direction: column
+            place-items: end
+            justify-content: normal;
+            padding: 0
+            >*
+                width: 265px
+
+                text-align: left
+                padding: 0px 0 42px
+                margin: 40px 0 0
+                border: none
+                border-bottom: 1px solid $white-op-16
+                flex-direction: row
+                align-items: center
+                gap: 32px
+
+            >*:first-child
+                margin: 0 0    
+                
+        @media screen and ( max-width: $mobileXL)
+            margin-top: 13px
+
+            >*
+                width: 206px
+                gap: 22px
+                margin-top: 34px
+                padding-bottom: 28px
+
+            &-desc
+                font-size: 12px
+
+            &-desc-down
+                font-size: 14px
+
+
 
 
 
     &__price
         width: 100%
+        height: fit-content
         text-align: right
         padding-bottom: 48px
-        margin-bottom: 47px
+        margin-bottom: 45px
         padding-right: 0
 
         border-right: none
         border-bottom: 1px solid $white-op-16
 
+        svg
+            display: none
 
         &-up
             color: $orange
@@ -161,23 +306,67 @@
 
         &-down
             font-size: 14px;
-            line-height: 170%;
+            line-height: 180%;
             text-transform: uppercase;
+        @media screen and ( max-width: $mobileXL)
+            &-cost
+                font-size: 27px
+
+
+        @media screen and ( max-width: $tablet)
+
+
+            svg
+                display: block
+
+            &-up
+                color: $orange
+                font-weight: 900
+                height: 34px
+                
+        
+            &-cost
+                font-size: 31px
+                line-height: 31px
+
+            &-num
+                padding-left: 3px
+
+            &-down
+                font-size: 12px;
+                line-height: 22px;
+            
+
+            
 
     &__footer
         background: $dark-grad
         padding: 33px 0
+        @media screen and ( max-width:  $tablet)
+            padding: 32px 0 28px
+
 
         .container
             display: flex
             flex-wrap: wrap
             justify-content: space-between
+            gap: 24px 30px
+
+            @media screen and ( max-width:  $mobileXL)
+                justify-content: center;
+                gap: 24px 60px
+                
 
         &-item
             font-weight: bold;
-            font-size: 14px;
-            line-height: 17px;
+            font-size: 16px;
+            line-height: 19px;
             text-transform: uppercase;
+            @media screen and ( max-width:  $tablet)
+                font-size: 14px
+                line-height: 14px
+
+
 
         &-item_active
             color: $orange !important
