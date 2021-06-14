@@ -1,0 +1,133 @@
+@import "base.sass"
+
+    
+.footer
+    padding: 100px 0 0 
+    background: $dark-blue
+    color: $extra-light
+    font-size: 14px;
+    line-height: 16px;
+
+    @media screen and ( max-width: $tablet )
+        padding-top: 88px
+        
+    @media screen and ( max-width: $mobileL )
+        padding-top: 60px
+
+    .container
+        display: flex
+        flex-direction: column
+        gap: 100px
+        @media screen and ( max-width: $tablet )
+            gap: 88px
+    
+        @media screen and ( max-width: $mobileL )
+            gap: 60px
+
+            
+    a
+        color: $extra-light
+        text-decoration: none
+
+    ul
+        list-style: none
+        display: flex
+        flex-direction: column
+        gap: 14px    
+
+    &__up
+        display: flex
+        justify-content: space-between
+        
+        @media screen and ( max-width: $mobileXL )
+            display: grid
+            grid-template-columns: 1fr 1fr 2fr
+            gap: 92px
+
+            .footer__logo
+                grid-column: 1/3
+                grid-row: 1/2
+
+            .footer__menu
+                grid-column: 1/2
+                grid-row: 2/3
+
+            .footer__services
+                grid-column: 2/3
+                grid-row: 2/3
+
+            .footer__contacts
+                grid-column: 3/4
+                grid-row: 1/3
+
+        @media screen and ( max-width: $mobileL )
+            display: grid
+            grid-template-columns: 1fr 2fr
+            gap: 32px 0
+
+            .footer__logo
+                grid-column: 1/2
+                grid-row: 1/2
+
+            .footer__menu
+                grid-column: 1/2
+                grid-row: 2/3
+
+            .footer__services
+                grid-column: 1/2
+                grid-row: 3/4
+
+            .footer__contacts
+                justify-self: end
+                grid-column: 2/3
+                grid-row: 1/4
+    &__down
+        
+        display: flex
+        justify-content: space-between
+        padding-top: 48px
+        padding-bottom: 40px
+        border-top: 1px solid $white-op-16
+
+        @media screen and ( max-width: $mobileXL )
+            font-size: 12px
+            line-height: 140%
+
+        @media screen and ( max-width: $mobileL )
+            flex-direction: column
+            place-items: center
+
+
+
+    &__end
+        display: none
+        @media screen and ( max-width: $mobileXL )
+            display: block
+        .container
+            padding-top: 18px 
+            padding-bottom: 18px 
+            background: $dark-grad-3
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+    
+    &__right
+        display: flex
+        gap: 36px
+
+    &__contacts
+        li
+            display: flex
+            align-items: center
+            gap: 17px
+            picture
+                width: 20px
+                img
+                    width: 100%
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+    
