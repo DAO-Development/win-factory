@@ -9,8 +9,8 @@ $white-op-40: rgba(255, 255, 255, 0.4)
 $white-op-20: rgba(255, 255, 255, 0.2)
 $dark-grad: linear-gradient(270deg, #041027 0%, #3F4352 100%)
 $dark-grad-2: linear-gradient(270deg, rgba(20, 35, 58, 0.05) 0%, #14233A 100%)
-$dark-grad-3: linear-gradient(270deg, #01091A 0%, #2F3341 100%);
-
+$dark-grad-3: linear-gradient(270deg, #01091A 0%, #2F3341 100%) 
+$blue: rgba(2, 135, 191, 1)
 $dark-blue: rgba(20, 35, 58, 1)
 $dark-blue-op: rgba(20, 35, 58, 0.55)
 $green-grad: linear-gradient(0deg, #20B038 0%, #60D66A 100%)
@@ -21,6 +21,7 @@ $background-light-grey: rgba(242, 249, 252, 1)
 $tabs-grey: rgba(192, 198, 205, 1)
 $shadow-grey: rgba(0, 18, 69, 0.12)
 $red-rad-grad: radial-gradient(50% 50% at 50% 50%, #CE0707 0%, #B90000 100%)
+$red-grad: linear-gradient(180deg, #EB926E 0%, #EB652F 58.85%) 
 $light-grad: linear-gradient(0deg, #F9F9F9 0.01%, #FFFFFF 100.02%)
 
 
@@ -33,10 +34,10 @@ $desktopS: 1440px
 $desktopM: 1600px
 $desktopL: 1920px
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/*font-family: 'Montserrat', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-/*    font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100 200 300 400 500 600 700 800 900&display=swap') 
+/*font-family: 'Montserrat', sans-serif  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100 300 400 500 700 900&display=swap') 
+/*    font-family: 'Roboto', sans-serif */
     
 *
     padding: 0
@@ -121,3 +122,17 @@ section
 
     @media screen and (max-width: $mobileL)
         margin-bottom: 60px
+
+
+.btn
+    padding: 16px
+    color: white
+    text-decoration: none
+    border-radius: 10px
+    background: $red-grad
+    font-weight: bold 
+    font-size: 12px 
+    line-height: 15px 
+    text-transform: uppercase
+    text-align: center
+    display: block

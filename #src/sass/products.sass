@@ -1,0 +1,61 @@
+@import "base.sass"
+
+.products
+
+    &__item
+        background: $extra-light
+        margin-top: 70px
+        padding: 138px 20px 20px
+        width: 285px
+        position: relative
+        border-radius: 10px;
+
+        picture
+            position: absolute
+            display: grid
+            height: fit-content
+            left: 0
+            top: -70px
+            width: 100%
+            place-items: center
+    
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 14px
+
+        &-item
+            display: flex
+            justify-content: space-between
+            font-size: 14px;
+            line-height: 16px;
+        &-value
+            font-weight: bold
+
+    &__price
+        margin: 30px auto
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center
+        color: $blue
+        
+    .btn
+        width: 100%
+
+    &__content
+        display: grid
+        gap: 40px 20px
+        grid-template-columns: 1fr 1fr 1fr 1fr
+
+        @media screen and ( max-width: $tablet )
+            grid-template-columns: 1fr 1fr 1fr 
+    
+    &__wrapper
+        padding: 10px
+
+    .slick-slide
+        position: relative
+        left: 1.2%
+
+            
