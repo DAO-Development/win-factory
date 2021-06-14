@@ -21,7 +21,7 @@ $light-grad: linear-gradient(0deg, #F9F9F9 0.01%, #FFFFFF 100.02%)
 
 
 $mobileS: 360px
-$mobileM: 414px
+$mobileM: 415px
 $mobileL: 568px
 $mobileXL: 768px
 $tablet: 1024px
@@ -44,6 +44,49 @@ body
 h1, h2, h3, h4, h5, h6, button, .btn
     font-family: 'Montserrat', sans-serif
     line-height: 120%
+
+h2
+    margin-bottom: 60px
+    text-align: center
+    font-size: 38px
+
+    @media screen and (max-width: $tablet)
+        margin-bottom: 48px
+        font-size: 32px
+
+    @media screen and (max-width: $mobileL)
+        margin-bottom: 40px
+        font-size: 28px
+
+h3
+    margin-bottom: 16px
+    font-size: 22px
+    font-weight: 700
+
+    @media screen and (max-width: $tablet)
+        font-size: 20px
+
+    @media screen and (max-width: $mobileL)
+        font-size: 18px
+
+    @media screen and (max-width: $mobileM)
+        margin-bottom: 12px
+
+    @media screen and (max-width: $mobileS)
+        font-size: 16px
+
+h4
+    font-size: 18px
+
+    @media screen and (max-width: $tablet)
+        font-size: 16px
+
+p
+    font-size: 16px
+
+    @media screen and (max-width: $tablet)
+        font-size: 14px
+        line-height: 22px
 
 div, button, .btn, section
     box-sizing: border-box
