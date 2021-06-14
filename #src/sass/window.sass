@@ -8,6 +8,48 @@
     &__services
         &-content
             & .services
+                &__tabs
+                    display: flex
+                    //justify-content: space-between
+                    gap: 12px
+                    align-content: center
+                    max-width: 912px
+                    margin: 0 auto 40px
+
+                    & .tab
+                        max-width: 198px
+                        padding: 14px 22px
+                        border: 1px solid $tabs-grey
+                        box-sizing: border-box
+                        border-radius: 30px
+                        font-size: 12px
+                        line-height: 15px
+                        font-weight: bold
+                        color: $tabs-grey
+                        text-align: center
+                        text-transform: uppercase
+                        transition: 0.3s ease
+
+                        & > span
+                            margin: 0
+                            padding: 0
+                            box-sizing: content-box
+
+                        &.tab-active
+                            border: 1px solid $orange
+                            color: $orange
+
+                    & .tabs-line
+                        width: 66px
+                        background-image: url("../img/window/line.svg")
+                        background-repeat: no-repeat
+                        background-position: 0 50%
+                        height: auto
+                        transition: 0.3s ease
+
+                        &.tabs-line-active
+                            background-image: url("../img/window/line-active.svg")
+
                 &__capability
                     position: relative
                     width: 1036px
@@ -45,7 +87,6 @@
                     padding: 40px 60px
 
                     ul
-                        //list-style: url("../img/window/list.svg")
                         display: flex
                         flex-direction: column
                         flex-wrap: wrap
@@ -73,18 +114,17 @@
                                     top: -2px
                                     left: -36px
 
-.arrow-next
-    transform: rotate(180deg)
 
 .arrow
-    width: 48px
-    height: 48px
+    width: 56px
+    height: 56px
     border-radius: 50%
     display: flex
     align-items: center
     cursor: pointer
     position: absolute
     top: 47%
+    transition: 0.3s ease
 
     img
         display: block
@@ -92,12 +132,18 @@
 
 .arrow-prev
     position: absolute
-    z-index: 1000
     left: -26px
+    background-image: url("../img/window/prev-arrow-active.svg")
+    background-size: contain
+
+    &.slick-disabled
+        background-image: url("../img/window/prev-arrow.svg")
 
 .arrow-next
     position: absolute
     right: -26px
+    background-image: url("../img/window/next-arrow-active.svg")
+    background-size: contain
 
-    img
-        margin-left: 20px
+    &.slick-disabled
+        background-image: url("../img/window/next-arrow.svg")
