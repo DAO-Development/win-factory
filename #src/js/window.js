@@ -2,9 +2,7 @@ $(document).ready(function () {
     $('.services-slider').slick({
         variableWidth: false,
         arrows: true,
-        // prevArrow: '<div class="arrow-prev arrow"><img src="../img/window/prev-arrow-active.svg"></div>',
         prevArrow: '<div class="arrow-prev arrow"></div>',
-        // nextArrow: '<div class="arrow-next arrow"><img src="../img/window/next-arrow-active.svg"></div>',
         nextArrow: '<div class="arrow-next arrow"></div>',
         infinite: false,
         slidesToShow: 1,
