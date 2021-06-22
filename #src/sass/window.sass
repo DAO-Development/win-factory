@@ -2,7 +2,7 @@
 .window
     & .services
         & > .container
-            @media screen and (max-width: $mobileXL)
+            @media screen and (max-width: $tabletS)
                 padding: 0 34px
 
             @media screen and (max-width: $mobileL)
@@ -18,10 +18,10 @@
             max-width: 912px
             margin: 0 auto 40px
 
-            @media screen and (max-width: $tablet)
+            @media screen and (max-width: $tabletM)
                 margin: 0 0 38px
 
-            @media screen and (max-width: $mobileXL)
+            @media screen and (max-width: $tabletS)
                 overflow-x: scroll
 
             @media screen and (max-width: $mobileL)
@@ -98,7 +98,7 @@
                 height: auto
                 transition: 0.3s ease
 
-                @media screen and (max-width: $mobileXL)
+                @media screen and (max-width: $tabletS)
                     min-width: 40px
 
                 @media screen and (max-width: $mobileL)
@@ -114,11 +114,11 @@
             background-color: $background-light-grey
             border-radius: 10px
 
-            @media screen and (max-width: $tablet)
+            @media screen and (max-width: $tabletM)
                 width: 784px
                 height: 707px
 
-            @media screen and (max-width: $mobileXL)
+            @media screen and (max-width: $tabletS)
                 width: 74vw
                 height: 911px
 
@@ -138,10 +138,10 @@
             & .slide
                 padding: 0 80px
 
-                @media screen and (max-width: $tablet)
+                @media screen and (max-width: $tabletM)
                     padding: 0 64px
 
-                @media screen and (max-width: $mobileXL)
+                @media screen and (max-width: $tabletS)
                     padding: 0 42px
 
                 @media screen and (max-width: $mobileL)
@@ -159,11 +159,11 @@
                 background: $dark-grad-2, url("../img/window/window-service-photo.png") no-repeat 100% 100%
                 border-radius: 10px 10px 0px 0px
 
-                @media screen and (max-width: $tablet)
+                @media screen and (max-width: $tabletM)
                     padding: 40px
                     height: 39.5%
 
-                @media screen and (max-width: $mobileXL)
+                @media screen and (max-width: $tabletS)
                     height: 30.5%
 
                 @media screen and (max-width: $mobileL)
@@ -206,7 +206,7 @@
             &__list
                 padding: 40px 60px
 
-                @media screen and (max-width: $tablet)
+                @media screen and (max-width: $tabletM)
                     padding: 40px
 
                 @media screen and (max-width: $mobileL)
@@ -224,10 +224,10 @@
                     height: 346px
                     list-style: none
 
-                    @media screen and (max-width: $tablet)
+                    @media screen and (max-width: $tabletM)
                         height: 360px
 
-                    @media screen and (max-width: $mobileXL)
+                    @media screen and (max-width: $tabletS)
                         flex-wrap: nowrap
                         height: auto
 
@@ -239,12 +239,12 @@
                         &:nth-child(3n)
                             margin-bottom: 0
 
-                        @media screen and (max-width: $tablet)
+                        @media screen and (max-width: $tabletM)
                             width: 340px
                             margin-right: 24px
                             margin-bottom: 24px
 
-                        @media screen and (max-width: $mobileXL)
+                        @media screen and (max-width: $tabletS)
                             width: 448px
                             margin-right: 0
                             &:nth-child(3n)
@@ -352,7 +352,7 @@
     top: 46%
     transition: 0.3s ease
 
-    @media screen and (max-width: $tablet)
+    @media screen and (max-width: $tabletM)
         width: 44px
         height: 44px
         top: 47.5%
@@ -372,7 +372,7 @@
     background-image: url("../img/window/prev-arrow-active.svg")
     background-size: contain
 
-    @media screen and (max-width: $mobileXL)
+    @media screen and (max-width: $tabletS)
         left: -24px
     @media screen and (max-width: $mobileL)
         left: 0
@@ -386,9 +386,9 @@
     background-image: url("../img/window/next-arrow-active.svg")
     background-size: contain
 
-    @media screen and (max-width: $mobileXL)
+    @media screen and (max-width: $tabletS)
         right: 24px
-    @media screen and (max-width: $mobileXL)
+    @media screen and (max-width: $tabletS)
         right: 0
 
     &.slick-disabled

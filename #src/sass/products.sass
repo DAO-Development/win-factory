@@ -5,10 +5,33 @@
     &__item
         background: $extra-light
         margin-top: 70px
-        padding: 138px 20px 20px
+        padding: 148px 30px 20px
         width: 285px
         position: relative
         border-radius: 10px;
+        @media screen and ( max-width: $tabletS )
+            padding-top: 140px
+
+        @media screen and ( max-width: $mobileL )
+            padding-top: 115px
+            width: 234px
+            padding-left: 20px
+            padding-right: 20px
+            
+
+        h3
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center
+            margin-bottom: 42px
+            @media screen and ( max-width: $mobileL )
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 32px
+
+
+                
 
         picture
             position: absolute
@@ -18,22 +41,34 @@
             top: -70px
             width: 100%
             place-items: center
+            @media screen and ( max-width: $mobileL )
+                top: -81px
+                img
+                    width: 134px
     
     &__info
         display: flex
         flex-direction: column
         gap: 14px
+        @media screen and ( max-width: $mobileL )
+            gap: 16px
 
         &-item
             display: flex
             justify-content: space-between
             font-size: 14px;
             line-height: 16px;
+            @media screen and ( max-width: $mobileL )
+                font-size: 12px;
+                line-height: 14px;  
         &-value
             font-weight: bold
+            @media screen and ( max-width: $mobileL )
+                font-size: 12px;
+                line-height: 14px;
 
     &__price
-        margin: 30px auto
+        margin: 25px auto
         font-weight: bold;
         font-size: 22px;
         line-height: 26px;
@@ -48,14 +83,17 @@
         gap: 40px 20px
         grid-template-columns: 1fr 1fr 1fr 1fr
 
-        @media screen and ( max-width: $tablet )
+        @media screen and ( max-width: $tabletM )
             grid-template-columns: 1fr 1fr 1fr 
+        
+
+
+
     
     &__wrapper
-        padding: 10px
+        @media screen and ( max-width: $tabletS )
+            padding: 10px 10px 10px 0
 
-    .slick-slide
-        position: relative
-        left: 1.2%
+
 
             

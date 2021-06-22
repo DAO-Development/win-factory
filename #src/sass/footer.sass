@@ -8,7 +8,7 @@
     font-size: 14px;
     line-height: 16px;
 
-    @media screen and ( max-width: $tablet )
+    @media screen and ( max-width: $tabletM)
         padding-top: 88px
         
     @media screen and ( max-width: $mobileL )
@@ -18,7 +18,7 @@
         display: flex
         flex-direction: column
         gap: 100px
-        @media screen and ( max-width: $tablet )
+        @media screen and ( max-width: $tabletM)
             gap: 88px
     
         @media screen and ( max-width: $mobileL )
@@ -39,7 +39,7 @@
         display: flex
         justify-content: space-between
         
-        @media screen and ( max-width: $mobileXL )
+        @media screen and ( max-width: $tabletS )
             display: grid
             grid-template-columns: 1fr 1fr 2fr
             gap: 92px
@@ -112,7 +112,7 @@
         padding-bottom: 40px
         border-top: 1px solid $white-op-16
 
-        @media screen and ( max-width: $mobileXL )
+        @media screen and ( max-width: $tabletS )
             font-size: 12px
             line-height: 140%
 
@@ -130,7 +130,7 @@
 
     &__end
         display: none
-        @media screen and ( max-width: $mobileXL )
+        @media screen and ( max-width: $tabletS )
             display: block
         .container
             padding-top: 18px 
@@ -144,7 +144,7 @@
     &__right
         display: flex
         gap: 36px
-        @media screen and ( max-width: $mobileXL )
+        @media screen and ( max-width: $tabletS )
             gap: 20px
         @media screen and ( max-width: $mobileM )
             a:first-child
