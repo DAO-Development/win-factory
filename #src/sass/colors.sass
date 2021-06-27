@@ -1,0 +1,56 @@
+@import "base.sass"
+    
+.colors
+
+    &__m-choice
+        margin: 0 auto
+        width: fit-content
+        border-radius: 45px
+        border: 1px solid $red
+        padding: 4px
+        display: flex
+        input
+            display: none
+        
+        label
+            padding: 16px 50px
+            border-radius: 30px
+            color: $tabs-grey
+        input:checked + label
+            background: $red-grad
+            color: white
+
+    &__content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin-top: 61px
+        gap: 88px
+
+        .btn
+            width: fit-content
+            padding: 18px 50px
+    
+    &__desc
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+
+    h4
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0em;
+        grid-column: 1/7
+
+    &__choice
+        margin: 40px 0 60px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 20px
+        width: fit-content
+
+    &__color
+        border-radius: 50%
