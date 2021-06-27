@@ -1,0 +1,182 @@
+.options
+    background-color: $background-light-grey
+    padding: 100px 0
+
+    .slide-container
+        position: relative
+
+        @media screen and (max-width: $tabletS)
+            padding-right: 0
+
+    .options-content
+        display: flex
+        justify-content: space-between
+        width: 1200px
+        @media screen and (max-width: $tabletM)
+            width: auto
+
+    .options__card
+        position: relative
+        width: 285px
+        height: 285px
+        padding: 31px 38px 40px
+        background-color: white
+        border-radius: 10px
+
+        @media screen and (max-width: $mobileL)
+            width: 234px
+            height: 224px
+            padding: 22px 30px 30px
+
+
+        &:hover
+            box-shadow: 0 5px 15px $shadow-grey
+
+    .slide
+        &:nth-child(1)
+            .card-title
+                margin-top: 42px
+                @media screen and (max-width: $mobileL)
+                    margin-top: 29px
+
+        &:nth-child(2)
+            .card-image
+                padding-left: 36px
+                @media screen and (max-width: $mobileL)
+                    padding-left: 30px
+
+            .card-title
+                margin-top: 42px
+                @media screen and (max-width: $mobileL)
+                    margin-top: 29px
+
+        .card
+            &-image
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 134px
+                height: 92px
+                margin: 0 auto
+                background-image: url("../img/window/cloud.svg")
+                background-size: contain
+
+                @media screen and (max-width: $mobileL)
+                    width: 116px
+                    height: 80px
+
+                & img
+                    width: 74px
+                    height: 74px
+                    @media screen and (max-width: $mobileL)
+                        width: 64px
+                        height: 64px
+
+            &-title
+                margin: 31px 0 41px
+                text-align: center
+                @media screen and (max-width: $mobileL)
+                    margin: 20px 0 32px
+
+            &-link
+                position: absolute
+                bottom: 40px
+                left: 71px
+                display: flex
+                align-items: center
+                font-size: 14px
+                line-height: 15px
+                font-weight: bold
+                color: $orange
+                text-transform: uppercase
+                @media screen and (max-width: $mobileL)
+                    bottom: 30px
+                    font-size: 10px
+                    line-height: 12px
+
+                &:after
+                    content: url("../img/window/link-arrow.svg")
+                    margin-left: 12px
+
+    &__pop-up
+        display: none
+        opacity: 0
+        transition: 0.3s ease
+
+        &.active
+            display: block
+            opacity: 1
+
+        & .pop-up
+            z-index: 1000
+            position: absolute
+            width: 1200px
+            height: 700px
+            padding: 30px
+            background-color: white
+            box-shadow: 0 10px 20px $shadow-grey
+            border-radius: 20px
+            left: 56px
+            top: -155px
+
+            &__close-btn
+                display: flex
+                justify-content: flex-end
+
+            &__content
+                display: grid
+                grid-template-columns: 1fr 1fr
+                margin-top: 46px
+
+            &__text
+                place-self: start end
+
+                h3
+                    margin-bottom: 20px
+
+                p
+                    margin-bottom: 60px
+                    max-width: 490px
+                    font-size: 16px
+                    line-height: 160%
+
+                .btn
+                    border: none
+                    font-size: 14px
+                    line-height: 17px
+                    padding: 18px 50px
+
+            &__photo
+                place-self: center
+                width: 512px
+                height: 572px
+                padding-top: 45px
+                padding-left: 79px
+                background-image: url("../img/window/cloud-pop-up.svg")
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+
+                .image
+                    width: 386px
+                    height: 500px
+                    overflow: hidden
+
+                img
+                    width: 386px
+                    height: auto
+
+.pop-up__wall
+    z-index: 1000
+    width: 100vw
+    height: 300vh
+    position: absolute
+    top: 0
+    left: 0
+    background-color: black
+    opacity: 0.55
+
+    display: none
+
+    &.active
+        display: block
