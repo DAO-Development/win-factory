@@ -99,6 +99,14 @@
                     margin-left: 12px
 
     &__pop-up
+        display: none
+        opacity: 0
+        transition: 0.3s ease
+
+        &.active
+            display: block
+            opacity: 1
+
         & .pop-up
             z-index: 1000
             position: absolute
@@ -132,6 +140,12 @@
                     font-size: 16px
                     line-height: 160%
 
+                .btn
+                    border: none
+                    font-size: 14px
+                    line-height: 17px
+                    padding: 18px 50px
+
             &__photo
                 place-self: center
                 width: 512px
@@ -162,3 +176,7 @@
     background-color: black
     opacity: 0.55
 
+    display: none
+
+    &.active
+        display: block
