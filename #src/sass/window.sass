@@ -1,105 +1,4 @@
 @import "base"
-.options
-    background-color: $background-light-grey
-    padding: 100px 0
-
-    .slide-container
-        padding: 0 0 0 56px
-
-        @media screen and (max-width: $tabletS)
-            padding: 0
-
-    .options-content
-        display: flex
-        justify-content: space-between
-        width: 1200px
-        @media screen and (max-width: $tabletM)
-            width: auto
-
-    .options__card
-        position: relative
-        width: 285px
-        height: 285px
-        padding: 31px 38px 40px
-        background-color: white
-        border-radius: 10px
-
-        @media screen and (max-width: $mobileL)
-            width: 234px
-            height: 224px
-            padding: 22px 30px 30px
-
-
-        &:hover
-            box-shadow: 0 5px 15px $shadow-grey
-
-    .slide
-        &:nth-child(1)
-            .card-title
-                margin-top: 42px
-                @media screen and (max-width: $mobileL)
-                    margin-top: 29px
-
-        &:nth-child(2)
-            .card-image
-                padding-left: 36px
-                @media screen and (max-width: $mobileL)
-                    padding-left: 30px
-
-            .card-title
-                margin-top: 42px
-                @media screen and (max-width: $mobileL)
-                    margin-top: 29px
-
-        .card
-            &-image
-                display: flex
-                align-items: center
-                justify-content: center
-                width: 134px
-                height: 92px
-                margin: 0 auto
-                background-image: url("../img/window/cloud.svg")
-                background-size: contain
-
-                @media screen and (max-width: $mobileL)
-                    width: 116px
-                    height: 80px
-
-                & img
-                    width: 74px
-                    height: 74px
-                    @media screen and (max-width: $mobileL)
-                        width: 64px
-                        height: 64px
-
-            &-title
-                margin: 31px 0 41px
-                text-align: center
-                @media screen and (max-width: $mobileL)
-                    margin: 20px 0 32px
-
-            &-link
-                position: absolute
-                bottom: 40px
-                left: 71px
-                display: flex
-                align-items: center
-                font-size: 14px
-                line-height: 15px
-                font-weight: bold
-                color: $orange
-                text-transform: uppercase
-                @media screen and (max-width: $mobileL)
-                    bottom: 30px
-                    font-size: 10px
-                    line-height: 12px
-
-                &:after
-                    content: url("../img/window/link-arrow.svg")
-                    margin-left: 12px
-
-
 .services
     margin: 100px 0
     @media screen and (max-width: $tabletM)
@@ -368,60 +267,59 @@
                             font-size: 12px
                             line-height: 19px
 
-    .arrow
-        z-index: 10000
-        width: 56px
-        height: 56px
-        border-radius: 50%
-        display: flex
-        align-items: center
-        cursor: pointer
-        position: absolute
-        top: 46%
-        transition: 0.3s ease
+.arrow
+    z-index: 500
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    cursor: pointer
+    position: absolute
+    top: 46%
+    transition: 0.3s ease
 
-        @media screen and (max-width: $tabletM)
-            width: 44px
-            height: 44px
-            top: 47.5%
+    @media screen and (max-width: $tabletM)
+        width: 44px
+        height: 44px
+        top: 47.5%
 
-        @media screen and (max-width: $mobileL)
-            width: 36px
-            height: 36px
-            top: 48%
+    @media screen and (max-width: $mobileL)
+        width: 36px
+        height: 36px
+        top: 48%
 
-        @media screen and (max-width: $mobileS)
-            width: 28px
-            height: 28px
+    @media screen and (max-width: $mobileS)
+        width: 28px
+        height: 28px
 
-        img
-            display: block
-    //margin-left: 17px
+    img
+        display: block
 
-    .arrow-prev
-        position: absolute
-        left: 0
-        background-image: url("../img/window/prev-arrow-active.svg")
-        background-size: contain
+.arrow-prev
+    position: absolute
+    left: 0
+    background-image: url("../img/window/prev-arrow-active.svg")
+    background-size: contain
 
-        @media screen and (max-width: $tabletS)
-            left: -24px
-        @media screen and (max-width: $mobileL)
-            left: -18px
+    @media screen and (max-width: $tabletS)
+        left: -24px
+    @media screen and (max-width: $mobileL)
+        left: -18px
 
-        &.slick-disabled
-            background-image: url("../img/window/prev-arrow.svg")
+    &.slick-disabled
+        background-image: url("../img/window/prev-arrow.svg")
 
-    .arrow-next
-        position: absolute
-        right: 0
-        background-image: url("../img/window/next-arrow-active.svg")
-        background-size: contain
+.arrow-next
+    position: absolute
+    right: 0
+    background-image: url("../img/window/next-arrow-active.svg")
+    background-size: contain
 
-        @media screen and (max-width: $tabletS)
-            right: -24px
-        @media screen and (max-width: $mobileL)
-            right: -18px
+    @media screen and (max-width: $tabletS)
+        right: -24px
+    @media screen and (max-width: $mobileL)
+        right: -18px
 
-        &.slick-disabled
-            background-image: url("../img/window/next-arrow.svg")
+    &.slick-disabled
+        background-image: url("../img/window/next-arrow.svg")
