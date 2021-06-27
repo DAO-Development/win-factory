@@ -9,7 +9,7 @@ $white-op-40: rgba(255, 255, 255, 0.4)
 $white-op-20: rgba(255, 255, 255, 0.2)
 $dark-grad: linear-gradient(270deg, #041027 0%, #3F4352 100%)
 $dark-grad-2: linear-gradient(270deg, rgba(20, 35, 58, 0.05) 0%, #14233A 100%)
-$dark-grad-3: linear-gradient(270deg, #01091A 0%, #2F3341 100%) 
+$dark-grad-3: linear-gradient(270deg, #01091A 0%, #2F3341 100%)
 $blue: rgba(2, 135, 191, 1)
 $dark-blue: rgba(20, 35, 58, 1)
 $dark-blue-op: rgba(20, 35, 58, 0.55)
@@ -21,9 +21,9 @@ $background-light-grey: rgba(242, 249, 252, 1)
 $tabs-grey: rgba(192, 198, 205, 1)
 $shadow-grey: rgba(0, 18, 69, 0.12)
 $red-rad-grad: radial-gradient(50% 50% at 50% 50%, #CE0707 0%, #B90000 100%)
-$red-grad: linear-gradient(180deg, #EB926E 0%, #EB652F 58.85%) 
+$red-grad: linear-gradient(180deg, #EB926E 0%, #EB652F 58.85%)
 $light-grad: linear-gradient(0deg, #F9F9F9 0.01%, #FFFFFF 100.02%)
-$light-pink: rgba(247, 248, 250, 1);
+$light-pink: rgba(247, 248, 250, 1)
 
 
 $mobileS: 360px
@@ -35,15 +35,16 @@ $desktopS: 1440px
 $desktopM: 1600px
 $desktopL: 1920px
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100 200 300 400 500 600 700 800 900&display=swap') 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100 200 300 400 500 600 700 800 900&display=swap')
 /*font-family: 'Montserrat', sans-serif  */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100 300 400 500 700 900&display=swap') 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100 300 400 500 700 900&display=swap')
 /*    font-family: 'Roboto', sans-serif */
 
-@font-face 
-    font-family: Montseratt; /* Имя шрифта */
-    src: url(fonts/pompadur.ttf); /* Путь к файлу со шрифтом */
-    
+@font-face
+    font-family: Montseratt /* Имя шрифта */
+    src: url(fonts/pompadur.ttf)
+/* Путь к файлу со шрифтом */
+
 *
     padding: 0
     margin: 0
@@ -68,11 +69,11 @@ h2
         margin-bottom: 40px
         font-size: 28px
 
-    @media screen and ( max-width: $mobileM )
+    @media screen and (max-width: $mobileM)
         max-width: 80vw
         margin-left: auto
         margin-right: auto
-        
+
 
 h3
     margin-bottom: 16px
@@ -105,26 +106,24 @@ p
         line-height: 22px
 
 .sub-title
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: center;
+    font-size: 16px
+    font-weight: 400
+    line-height: 26px
+    letter-spacing: 0
+    text-align: center
     max-width: 630px
     margin: -35px auto 60px
 
-    @media screen and ( max-width: $tabletM )
+    @media screen and (max-width: $tabletM)
         margin-top: -30px
         margin-bottom: 48px
 
-    @media screen and ( max-width: $mobileL )
-        font-size: 14px;
-        line-height: 160%;
+    @media screen and (max-width: $mobileL)
+        font-size: 14px
+        line-height: 160%
         max-width: 425px
         margin-top: -26px
         margin-bottom: 40px
-        
-    
 
 
 div, button, .btn, section
@@ -137,7 +136,7 @@ div, button, .btn, section
 .container
     margin: 0 auto
     max-width: 99vw
-    width: 1345px
+    width: 1200px
 
     @media screen and (max-width: $mobileM)
         width: 84.5vw
@@ -150,7 +149,6 @@ div, button, .btn, section
     @media screen and (max-width: $desktopS)
         width: 1200px
 
-    
 
 .slide-container
     margin: 0 auto
@@ -162,15 +160,15 @@ div, button, .btn, section
         padding: 0
         margin-left: 7.2vw
         width: 92.8vw
-    
+
     @media screen and (max-width: $mobileL)
         margin-left: 7.2vw
         width: 92.8vw
 
-   
-    @media screen and (max-width: $mobileS)
-        margin-left: 1vw
-        width: 99vw
+
+    //@media screen and (max-width: $mobileS)
+    //    margin-left: 1vw
+    //    width: 99vw
 
 section
     margin-bottom: 100px
@@ -188,38 +186,39 @@ section
 .white-sec
     padding-top: 100px
 
-    @media screen and ( max-width: $tabletM )
+    @media screen and (max-width: $tabletM)
         padding-top: 88px
-    
-    @media screen and ( max-width: $mobileL )
+
+    @media screen and (max-width: $mobileL)
         padding-top: 60px
+
 .pink-sec
     margin-top: 108px
     padding: 100px 0
     background: $light-pink
 
-    @media screen and ( max-width: $tabletM )
+    @media screen and (max-width: $tabletM)
         padding: 88px 0
-    
-    @media screen and ( max-width: $mobileL )
+
+    @media screen and (max-width: $mobileL)
         padding: 60px 0
-        
-        
+
+
 .btn
     padding: 16px
     color: white
     text-decoration: none
     border-radius: 10px
     background: $red-grad
-    font-weight: bold 
-    font-size: 12px 
-    line-height: 15px 
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
     text-transform: uppercase
     text-align: center
     display: block
 
-    @media screen and ( max-width: $mobileL )
-        font-size: 10px;
-        line-height: 12px;
+    @media screen and (max-width: $mobileL)
+        font-size: 10px
+        line-height: 12px
         padding: 14px
         
