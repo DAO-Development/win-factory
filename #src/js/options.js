@@ -45,17 +45,20 @@ $(document).ready(function () {
 
     let cards = document.getElementsByClassName('options__card')
     let wall = document.getElementsByClassName('pop-up__wall')
+    let body = document.getElementsByTagName('body')
     for (let i = 0; i < cards.length; i++) {
         cards[i].onclick = function () {
             console.log(cards[i].id)
             let popup = document.getElementById('pop-up-' + (i + 1))
             popup.classList.add('active')
             wall[0].classList.add('active')
+            // body[0].classList.add('overflow')
         }
     }
 
     $('.pop-up__close-btn').on("click", function () {
         $('.options__pop-up').removeClass('active')
         $('.pop-up__wall').removeClass('active')
+        // $('body').removeClass('overflow')
     })
 })

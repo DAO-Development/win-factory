@@ -10,6 +10,7 @@
         display: flex
         gap: 12px
         align-content: center
+        justify-content: center
         max-width: 912px
         margin: 0 auto 40px
 
@@ -85,11 +86,13 @@
                 color: $orange
 
         & .tabs-line
+            display: block
             min-width: 66px
             max-width: 66px
             background-image: url("../img/window/line.svg")
             background-repeat: no-repeat
             background-position: 0 50%
+            background-size: contain
             height: auto
             transition: 0.3s ease
 
@@ -197,6 +200,17 @@
 
                 @media screen and (max-width: $mobileS)
                     max-width: 100%
+
+            .btn
+                border: none
+                padding: 18px 50px
+                font-size: 14px
+                line-height: 17px
+                @media screen and (max-width: $mobileL)
+                    padding: 16px 40px
+                    font-size: 12px
+                    line-height: 15px
+
 
         &__list
             padding: 40px 60px
