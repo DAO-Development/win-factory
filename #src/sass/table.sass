@@ -1,0 +1,119 @@
+
+    
+.table
+    &__content
+        background: $blue-bg
+        padding-top: 100px
+
+    &__info
+        max-width: 1080px
+        margin: 0 auto
+        gap: 0 10px
+        &>*
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            @media screen and ( max-width: $tabletS )
+                grid-template-columns: 1fr 1fr
+            @media screen and ( max-width: $mobileL )
+                grid-template-columns: 1fr
+                
+
+            
+    &__ceil
+        max-width: 300px
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        @media screen and ( max-width: $tabletM )
+            font-size: 14px;
+            line-height: 160%;
+        @media screen and ( max-width: $tabletS )
+            grid-column: 2/3
+            &::before
+                display: block
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            &:nth-of-type(2)::before
+                content: "Дверные блоки из алюминия"
+            &:nth-of-type(3)
+                padding-top: 20px
+            &:nth-of-type(3)::before
+                content: "Дверные блоки из ПВХ"
+
+        @media screen and ( max-width: $mobileL )
+            grid-column: 1/2
+        @media screen and ( max-width: $mobileM )
+            font-size: 12px;
+
+                
+                
+
+
+                
+            
+
+    &__row
+        border-radius: 10px
+        padding: 40px 40px
+        @media screen and ( max-width: $tabletM )
+            padding: 20px 20px
+            margin: 0 40px
+            
+        @media screen and ( max-width: $mobileL )
+            margin: 0 20px
+        @media screen and ( max-width: $mobileS )
+            padding: 20px 10px
+            margin: 0 10px
+
+            
+    &__row:nth-child(2n+1)
+        background: white        
+
+    &__head
+        background: $blue !important
+        color: white
+        padding-top: 24px !important
+        padding-bottom: 24px !important
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        @media screen and ( max-width: $tabletM )
+            font-size: 16px;
+            line-height: 19px;
+
+        @media screen and ( max-width: $tabletS )
+            display: none
+            
+
+    &__left-th
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        grid-column: 1/2
+        margin-bottom: 20px
+        @media screen and ( max-width: $tabletM )
+            font-size: 20px;
+            line-height: 24px;
+        @media screen and ( max-width: $tabletS )
+            font-size: 18px;
+            line-height: 120%;
+        @media screen and ( max-width: $mobileM )
+            font-size: 16px;
