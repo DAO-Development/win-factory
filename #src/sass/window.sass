@@ -1,11 +1,5 @@
 @import "base"
 .services
-    margin: 100px 0
-    @media screen and (max-width: $tabletM)
-        margin: 88px 0
-    @media screen and (max-width: $mobileL)
-        margin: 60px 0
-
     &__tabs
         display: flex
         gap: 12px
@@ -281,59 +275,59 @@
                             font-size: 12px
                             line-height: 19px
 
-.arrow
-    z-index: 500
-    width: 56px
-    height: 56px
-    border-radius: 50%
-    display: flex
-    align-items: center
-    cursor: pointer
-    position: absolute
-    top: 46%
-    transition: 0.3s ease
+    .arrow
+        z-index: 500
+        width: 56px
+        height: 56px
+        border-radius: 50%
+        display: flex
+        align-items: center
+        cursor: pointer
+        position: absolute
+        top: 46%
+        transition: 0.3s ease
 
-    @media screen and (max-width: $tabletM)
-        width: 44px
-        height: 44px
-        top: 47.5%
+        @media screen and (max-width: $tabletM)
+            width: 44px
+            height: 44px
+            top: 47.5%
 
-    @media screen and (max-width: $mobileL)
-        width: 36px
-        height: 36px
-        top: 48%
+        @media screen and (max-width: $mobileL)
+            width: 36px
+            height: 36px
+            top: 48%
 
-    @media screen and (max-width: $mobileS)
-        width: 28px
-        height: 28px
+        @media screen and (max-width: $mobileS)
+            width: 28px
+            height: 28px
 
-    img
-        display: block
+        img
+            display: block
 
-.arrow-prev
-    position: absolute
-    left: 0
-    background-image: url("../img/window/prev-arrow-active.svg")
-    background-size: contain
+    .arrow-prev
+        position: absolute
+        left: 0
+        background-image: url("../img/window/prev-arrow-active.svg")
+        background-size: contain
 
-    @media screen and (max-width: $tabletS)
-        left: -24px
-    @media screen and (max-width: $mobileL)
-        left: -18px
+        @media screen and (max-width: $tabletS)
+            left: -24px
+        @media screen and (max-width: $mobileL)
+            left: -18px
 
-    &.slick-disabled
-        background-image: url("../img/window/prev-arrow.svg")
+        &.slick-disabled
+            background-image: url("../img/window/prev-arrow.svg")
 
-.arrow-next
-    position: absolute
-    right: 0
-    background-image: url("../img/window/next-arrow-active.svg")
-    background-size: contain
+    .arrow-next
+        position: absolute
+        right: 0
+        background-image: url("../img/window/next-arrow-active.svg")
+        background-size: contain
 
-    @media screen and (max-width: $tabletS)
-        right: -24px
-    @media screen and (max-width: $mobileL)
-        right: -18px
+        @media screen and (max-width: $tabletS)
+            right: -24px
+        @media screen and (max-width: $mobileL)
+            right: -18px
 
-    &.slick-disabled
-        background-image: url("../img/window/next-arrow.svg")
+        &.slick-disabled
+            background-image: url("../img/window/next-arrow.svg")
