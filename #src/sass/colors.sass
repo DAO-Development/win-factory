@@ -57,6 +57,8 @@
         grid-template-columns: 1fr 1fr
         margin-top: 32px
         gap: 25px 88px
+        max-width: 1000px
+        margin: 55px auto 0
         @media screen and ( max-width: $tabletS )
             grid-template-columns: 100%
 
@@ -100,7 +102,28 @@
             
 
     &__color
+        
+        cursor: pointer
+        picture
+            border-radius: 50%
+            display: flex
+            height: fit-content
+            overflow: hidden
+            width: 45px
+            height: 45px
+            border-radius: 50%
+            border: 2px solid rgba(0, 0, 0, 0)
+
+            img
+                height: 47px
+                width: 47px
+                margin-top: -1px
+                margin-left: -1px
+
+    .active picture 
         border-radius: 50%
+        background: $red
+        border: 2px solid $red
 
     &__item
         display: grid
