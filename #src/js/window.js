@@ -8,14 +8,34 @@ $(document).ready(function () {
         slidesToShow: 1,
     });
 
+    let tabs = document.getElementsByClassName('tab')
+
     $('.services-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        console.log("current " + currentSlide)
+        console.log("next " + nextSlide)
         if (nextSlide > currentSlide) {
-            document.getElementById("service-tab-" + (nextSlide + 1)).classList.add("tab-active");
-            document.getElementById("tab-line-" + (nextSlide + 1)).classList.add("tabs-line-active");
+            for (let i = 0; i < tabs.length; i++) {
+                if (i <= nextSlide && i !== 0) {
+                    console.log(i < nextSlide)
+                    document.getElementById("service-tab-" + (i + 1)).classList.add("tab-active");
+                    document.getElementById("tab-line-" + (i + 1)).classList.add("tabs-line-active");
+                }
+            }
         }
         if (nextSlide < currentSlide) {
-            document.getElementById("service-tab-" + (currentSlide + 1)).classList.remove("tab-active");
-            document.getElementById("tab-line-" + (currentSlide + 1)).classList.remove("tabs-line-active");
+            for (let i = 0; i < tabs.length; i++) {
+                if (i > nextSlide && i !== 0) {
+                    document.getElementById("service-tab-" + (i + 1)).classList.remove("tab-active");
+                    document.getElementById("tab-line-" + (i + 1)).classList.remove("tabs-line-active");
+                }
+            }
         }
     });
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].onclick = function () {
+            $('.services-slider').slick('slickGoTo', i)
+        }
+    }
+
 });
