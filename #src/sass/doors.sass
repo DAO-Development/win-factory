@@ -1,0 +1,27 @@
+.doors
+    &__types
+        .types__content
+            gap: 120px
+            @media screen and ( max-width: $tabletM )
+                gap: 100px
+            @media screen and ( max-width: $tabletS )
+                gap: 16px 
+            @media screen and ( max-width: $mobileL )
+                gap: 0
+                    
+        .type__list 
+            @media screen and ( max-width: $mobileL ) 
+                margin-top: 14px;
+            @media screen and ( max-width: $mobileS ) 
+                margin-top: 12px;
+
+                
+        .type
+            background: none
+            box-shadow: none
+            width: fit-content
+            padding: 0
+            @media screen and ( max-width: $tabletS )
+                place-items: center
+                grid-template-columns: 1fr
+                gap: 0
