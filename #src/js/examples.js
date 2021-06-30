@@ -28,8 +28,9 @@ $(document).ready(function () {
     // }
 
     $(function () {
-        $('.filter-hover').click(function (event) {
-            var i_path = $(this).attr('src');
+        $('.examples__image').click(function (event) {
+            console.log($(this).find("img"))
+            var i_path = $(this).find('img').attr('src');
             $('body').append('<div id="overlay"></div><div id="magnify"><img src="' + i_path + '"><div id="close-popup"><i></i></div></div>');
             $('#magnify').css({
                 left: ($(document).width() - $('#magnify').outerWidth()) / 2,
