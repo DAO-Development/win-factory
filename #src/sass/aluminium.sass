@@ -1,0 +1,118 @@
+.aluminium
+    & .types
+        margin-top: 0
+
+        & .type
+            background-repeat: no-repeat
+            background-position: top right
+
+            &:first-child
+                background-image: url("../img/aluminium/cold-icon.png")
+
+            &:last-child
+                background-image: url("../img/aluminium/sun-icon.png")
+
+            &__title
+                grid-column: 1/3
+
+            &__short-desc
+                grid-column: 1/3
+                max-width: 450px
+
+
+            & h4
+                margin: 40px 0 16px
+                @media screen and (max-width: $tabletM)
+                    margin: 36px 0 16px
+                @media screen and (max-width: $mobileL)
+                    margin: 24px 0 12px
+
+            & ul
+                margin-top: 0
+
+            &__list
+                grid-column: 1/2
+                grid-row: 4/5
+
+            &__characteristic
+                list-style: none
+                display: flex
+                flex-direction: column
+                max-width: 280px
+                gap: 14px
+                grid-column: 2/3
+                grid-row: 4/5
+
+                & > li
+                    display: flex
+                    justify-content: space-between
+
+                & span
+                    font-size: 14px
+                    line-height: 16px
+
+                    &:last-child
+                        font-weight: 700
+
+
+    & .promo
+        &__card
+            padding: 100px 102px
+            background-color: $blue
+            border-radius: 20px
+            color: white
+            @media screen and (max-width: $tabletM)
+                padding: 88px 60px
+            @media screen and (max-width: $tabletS)
+                padding: 88px 70px
+            @media screen and (max-width: $mobileL)
+                padding: 60px 40px
+            @media screen and (max-width: $mobileM)
+                padding: 60px 30px
+            @media screen and (max-width: $mobileS)
+                padding: 60px 24px
+
+        &__content
+            display: flex
+            justify-content: space-between
+
+        .card
+            &__content
+                ul
+                    list-style: none
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+                    max-width: 516px
+                    margin-bottom: 40px
+                    @media screen and (max-width: $tabletM)
+                        margin-bottom: 36px
+
+
+                    & > li
+                        display: flex
+                        gap: 16px
+                        align-items: center
+                        font-weight: 700
+                        font-size: 18px
+                        line-height: 22px
+
+                        &:before
+                            content: url("../img/aluminium/check-icon.png")
+
+                .btn
+                    border: none
+                    padding: 18px 50px
+                    font-size: 14px
+                    line-height: 17px
+                    @media screen and (max-width: $tabletS)
+                        margin: 0 auto
+                    @media screen and (max-width: $mobileL)
+                        padding: 16px 40px
+                        font-size: 12px
+                        line-height: 15px
+
+            &__image
+                display: block
+                @media screen and (max-width: $tabletS)
+                    display: none
