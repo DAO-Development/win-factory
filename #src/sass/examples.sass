@@ -170,13 +170,15 @@
 #magnify
     display: none
     position: fixed
-    max-width: 600px
-    height: auto
+    //max-width: 600px
+    width: 100vw
+    height: 100vh
     z-index: 9999
 
 #magnify
     & img
-        width: 200%
+        width: 90%
+        place-self: center
 
 /* затемняющий фон */
 #overlay
@@ -194,9 +196,6 @@
 #close-popup
     width: 30px
     height: 30px
-    background: #FFFFFF
-    border: 1px solid #AFAFAF
-    border-radius: 15px
     cursor: pointer
     position: absolute
     top: 15px
@@ -206,8 +205,12 @@
 #close-popup i
     width: 30px
     height: 30px
-    background: url(https://codernote.ru/files/cross.png) no-repeat center center
+    background-image: url("../img/window/close-icon.png")
+    background-repeat: no-repeat
+    background-position: center
     background-size: 16px 16px
+    background-color: #FFFFFF
+    border-radius: 15px
     display: block
 
 #close-popup:hover
