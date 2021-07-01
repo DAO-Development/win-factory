@@ -1,10 +1,15 @@
 .balconies
 
     &__services
-        .services__capability
+        & .services__capability
             height: fit-content
 
-        .service__list 
+            & .service__main
+                background: $dark-grad-2, url("../img/balconies/services.png") no-repeat 100% 100%
+
+        & .service__list
             height: fit-content
+
             ul
                 height: 200px
+
