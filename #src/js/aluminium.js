@@ -1,30 +1,35 @@
 $(document).ready(function () {
-    $('.products-slider').slick({
-        slidesToShow: 2,
-        variableWidth: false,
-        arrows: false,
-        dots: true,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 569,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 415,
-                settings: {
-                    slidesToShow: 1.5,
-                }
-            },
-            {
-                breakpoint: 361,
-                settings: {
-                    slidesToShow: 1.4,
-                }
-            }
-
-        ]
-    });
+    if ($(window).width() <= '360') {
+        $('.products__content').slick({
+            slidesToShow: 1.2,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() <= '414') {
+        $('.products__content').slick({
+            slidesToShow: 1.5,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() <= '768' || $(window).width() > '1024') {
+        $('.products__content').slick({
+            slidesToShow: 2,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    } else if ($(window).width() <= '1024') {
+        $('.products__content').slick({
+            slidesToShow: 1.5,
+            variableWidth: false,
+            arrows: false,
+            dots: true,
+            infinite: false
+        });
+    }
 })
