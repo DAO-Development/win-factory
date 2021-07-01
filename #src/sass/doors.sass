@@ -1,27 +1,58 @@
 .doors
     &__types
         .types__content
-            gap: 120px
-            @media screen and ( max-width: $tabletM )
-                gap: 100px
-            @media screen and ( max-width: $tabletS )
-                gap: 16px 
-            @media screen and ( max-width: $mobileL )
-                gap: 0
-                    
-        .type__list 
-            @media screen and ( max-width: $mobileL ) 
-                margin-top: 14px;
-            @media screen and ( max-width: $mobileS ) 
-                margin-top: 12px;
+        gap: 120px
+        @media screen and (max-width: $tabletM)
+            gap: 100px
+        @media screen and (max-width: $tabletS)
+            gap: 16px
+        @media screen and (max-width: $mobileL)
+            gap: 0
 
-                
+        .type__list
+            @media screen and (max-width: $mobileL)
+                margin-top: 14px
+            @media screen and (max-width: $mobileS)
+                margin-top: 12px
+
+
         .type
             background: none
             box-shadow: none
             width: fit-content
             padding: 0
-            @media screen and ( max-width: $tabletS )
+            @media screen and (max-width: $tabletS)
                 place-items: center
                 grid-template-columns: 1fr
                 gap: 0
+
+    &__services
+        & .services__tabs
+            justify-content: center
+
+            & .tab:nth-child(3)
+                min-width: 136px
+                width: auto
+
+        & .services__capability
+            max-height: 500px
+            //height: fit-content
+            @media screen and (max-width: $tabletM)
+                max-height: 572px
+
+            &.service__main
+                background-size: cover
+                @media screen and (max-width: $tabletM)
+                    height: 60%
+
+        & .service__list
+            height: fit-content
+
+            ul
+                height: 100px
+                gap: 24px
+                @media screen and (max-width: $tabletM)
+                    max-height: 150px
+
+                & > li
+                    margin-bottom: 0 !important
