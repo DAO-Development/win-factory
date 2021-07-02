@@ -3,12 +3,17 @@ $(document).ready(function () {
     if ($(window).width() <= '768') {
 
         $('.products__content').slick({
-            slidesToShow: 2.3,
             variableWidth: false,
             arrows: false,
             dots: true,
             infinite: false,
             responsive: [
+                {
+                  breakpoint: 769,
+                  settings: {
+                    slidesToShow: 2.3,
+                  }
+                },
                 {
                   breakpoint: 569,
                   settings: {

@@ -46,7 +46,7 @@ $(document).ready(function () {
             $('#overlay, #magnify').fadeIn('fast');
         });
 
-        $('body').on('click', '#close-popup, #overlay', function (event) {
+        $('body').on('click', '#close-popup, #magnify', function (event) {
             event.preventDefault();
             $('#overlay, #magnify').fadeOut('fast', function () {
                 $('#close-popup, #magnify, #overlay').remove();

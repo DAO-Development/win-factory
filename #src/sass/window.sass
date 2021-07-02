@@ -57,7 +57,7 @@
             text-align: center
             text-transform: uppercase
             transition: 0.3s ease
-
+            cursor: pointer
             &:nth-child(1)
                 min-width: 143px
                 width: 143px
@@ -167,9 +167,9 @@
         &__main
             z-index: 100
             padding: 40px 60px
-            height: 41.5%
+            height: fit-content
             background: $dark-grad-2, url("../img/window/window-service-photo.png") no-repeat
-            background-size: cover
+            background-size: cover !important
             border-radius: 10px 10px 0 0
 
             @media screen and (max-width: $tabletM)

@@ -49,6 +49,7 @@
                     //display: flex
                     opacity: 1
                     transition: 0.3s ease
+                    cursor: pointer
 
             & img
                 width: auto
@@ -177,8 +178,11 @@
 
 #magnify
     & img
-        width: 90%
+        width: 70%
         place-self: center
+        @media screen and ( max-width: $mobileL )
+            width: 90%
+            
 
 /* затемняющий фон */
 #overlay
@@ -211,7 +215,7 @@
     background-size: 16px 16px
     background-color: #FFFFFF
     border-radius: 15px
-    display: block
+    display: none
 
 #close-popup:hover
     -webkit-animation-iteration-count: 1
