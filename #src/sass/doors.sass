@@ -1,6 +1,6 @@
 .doors
     &__types
-        .types__content
+        & .types__content
             gap: 120px
             @media screen and (max-width: $tabletM)
                 gap: 100px
@@ -35,15 +35,12 @@
                 width: auto
 
         & .services__capability
-            max-height: 500px
-            //height: fit-content
-            @media screen and (max-width: $tabletM)
-                max-height: 572px
+            //max-height: 500px
+            height: fit-content
 
-            &.service__main
+            & .service__main
                 background-size: cover
-                @media screen and (max-width: $tabletM)
-                    height: 60%
+                height: fit-content
 
         & .service__list
             height: fit-content
@@ -53,6 +50,17 @@
                 gap: 24px
                 @media screen and (max-width: $tabletM)
                     max-height: 150px
+                @media screen and (max-width: $tabletS)
+                    display: grid
+                    grid-auto-flow: column
+                    grid-template-columns: 1fr 1fr
+                    grid-template-rows: 1fr 1fr 1fr
+                    column-gap: 45px
+                @media screen and (max-width: $mobileL)
+                    display: flex
+                    flex-direction: column
+                    max-height: 550px
 
                 & > li
                     margin-bottom: 0 !important
+                    width: fit-content !important
